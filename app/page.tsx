@@ -131,7 +131,7 @@ export default function Home() {
               </p>
 
               <a
-                href="#"
+                href="/about"
                 className="mt-6 inline-flex font-semibold text-[#6d1f2b]"
               >
                 අපගේ ඉතිහාසය →
@@ -183,7 +183,7 @@ export default function Home() {
                 </p>
 
                 <a
-                  href="#"
+                  href="/competitions"
                   className="mt-5 inline-block font-semibold text-[#6d1f2b]"
                 >
                   වැඩි විස්තර →
@@ -208,12 +208,9 @@ export default function Home() {
               </h2>
             </div>
 
-            <a
-              href="#"
-              className="font-semibold text-[#f2d9a0] hover:text-white"
-            >
-              සියලු තරඟ බලන්න →
-            </a>
+            <span className="mt-5 inline-block font-semibold text-[#6d1f2b]">
+              වැඩි විස්තර ඉදිරියේදී →
+            </span>
           </div>
 
           <div className="mt-10 grid gap-6 lg:grid-cols-3">
@@ -260,7 +257,7 @@ export default function Home() {
           </p>
 
           <a
-            href="#"
+            href="/membership"
             className="mt-8 inline-flex rounded-xl bg-[#6d1f2b] px-7 py-3 font-semibold text-white"
           >
             සාමාජිකත්ව අයදුම්පත

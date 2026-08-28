@@ -214,12 +214,9 @@ export default function NewsPage() {
                     {item.description}
                   </p>
 
-                  <a
-                    href="#"
-                    className="mt-5 inline-block font-semibold text-[#6d1f2b]"
-                  >
-                    වැඩි විස්තර →
-                  </a>
+                  <span className="mt-5 inline-block font-semibold text-[#6d1f2b]">
+                    වැඩි විස්තර ඉදිරියේදී →
+                  </span>
                 </div>
               </article>
             ))}
