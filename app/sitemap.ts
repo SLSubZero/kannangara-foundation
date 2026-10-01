@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "http://localhost:3000";
+  const baseUrl = "https://kannangarafoundation.lk";
 
   return [
     {
