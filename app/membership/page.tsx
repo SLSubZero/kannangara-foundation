@@ -592,43 +592,6 @@ export default function MembershipPage() {
         </div>
       </section>
 
-      {/* Future System */}
-      <section className="bg-[#5b1823] py-20 text-white">
-        <div className="mx-auto max-w-5xl px-4 text-center sm:px-6 lg:px-8">
-          <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#e5c990]">
-            Future Membership System
-          </p>
-
-          <h2 className="mt-4 text-3xl font-bold sm:text-4xl">
-            සාමාජිකත්ව කළමනාකරණය තවත් ඉදිරියට
-          </h2>
-
-          <p className="mx-auto mt-5 max-w-3xl leading-8 text-white/70">
-            ඉදිරි අදියරකදී මෙම අයදුම්පත database එකක් සමඟ සම්බන්ධ කර,
-            application number, approval status සහ member records
-            කළමනාකරණය කළ හැකි පූර්ණ membership system එකක්
-            බවට සංවර්ධනය කළ හැක.
-          </p>
-
-          <div className="mx-auto mt-10 grid max-w-3xl gap-4 text-left sm:grid-cols-3">
-            <div className="rounded-2xl border border-white/10 bg-white/10 p-5">
-              <p className="font-bold text-[#e5c990]">01</p>
-              <p className="mt-2 font-semibold">Online Application</p>
-            </div>
-
-            <div className="rounded-2xl border border-white/10 bg-white/10 p-5">
-              <p className="font-bold text-[#e5c990]">02</p>
-              <p className="mt-2 font-semibold">Application Review</p>
-            </div>
-
-            <div className="rounded-2xl border border-white/10 bg-white/10 p-5">
-              <p className="font-bold text-[#e5c990]">03</p>
-              <p className="mt-2 font-semibold">Member Record</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* CTA */}
       <section className="bg-[#f5efe5] py-20">
         <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
