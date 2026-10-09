@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Navbar from "../../../components/Navbar";
 
 const categories = [
@@ -27,28 +26,7 @@ const prizes = [
   },
 ];
 
-const steps = [
-  {
-    number: "01",
-    title: "තරඟ අංශය තෝරන්න",
-    text: "ඔබට අදාළ වයස් / ශ්‍රේණි අංශය තෝරා තරඟ විස්තර පරීක්ෂා කරන්න.",
-  },
-  {
-    number: "02",
-    title: "අයදුම්පත සම්පූර්ණ කරන්න",
-    text: "දැනට භාවිතා වන නිල අයදුම්පත්‍රය සම්පූර්ණ කරන්න.",
-  },
-  {
-    number: "03",
-    title: "අත්සන් සහ සහතික ලබාගන්න",
-    text: "අදාළ ස්ථානවලට අවශ්‍ය අත්සන් සහ සහතික ලබාගන්න.",
-  },
-  {
-    number: "04",
-    title: "නිර්මාණය තැපැල් කරන්න",
-    text: "සම්පූර්ණ කළ අයදුම්පත සමඟ නිර්මාණය පදනම වෙත තැපැල් කරන්න.",
-  },
-];
+
 
 export default function ArtCompetition2026Page() {
   return (
@@ -61,7 +39,7 @@ export default function ArtCompetition2026Page() {
           <div className="grid gap-10 lg:grid-cols-[1fr_0.85fr] lg:items-center">
             <div>
               <span className="inline-flex rounded-full bg-[#f5efe5] px-4 py-2 text-xs font-bold uppercase tracking-[0.15em] text-[#8a6737]">
-                2026 • චිත්‍ර තරඟාවලිය
+                2026 • නිල තරඟ වාර්තාව
               </span>
 
               <h1 className="mt-5 text-4xl font-extrabold leading-tight text-[#5b1823] sm:text-5xl">
@@ -74,40 +52,21 @@ export default function ArtCompetition2026Page() {
 
               <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">
                 ආචාර්ය සී.ඩබ්ලිව්.ඩබ්ලිව්. කන්නන්ගර ශ්‍රීමතාණන්ගේ
-                අනුස්මරණය වෙනුවෙන් දරු දැරියන්ගේ නිර්මාණශීලීත්වය
-                දිරිගැන්වීම සඳහා සංවිධානය කරන 2026 චිත්‍ර තරඟාවලිය.
+                අනුස්මරණය වෙනුවෙන් 2026 වර්ෂයේ පැවැත්වූ චිත්‍ර තරඟාවලිය
+                පිළිබඳ තොරතුරු සහ ප්‍රතිඵල සඳහා මෙම පිටුව වෙන් කර ඇත.
               </p>
 
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <a
-                  href="#application"
+                  href="#results"
                   className="rounded-xl bg-[#6d1f2b] px-6 py-3 text-center font-semibold text-white transition hover:bg-[#571822]"
                 >
-                  අයදුම් කිරීමේ විස්තර
+                  ප්‍රතිඵල බලන්න
                 </a>
 
-                <a
-                  href="#poster"
-                  className="rounded-xl border border-[#6d1f2b] px-6 py-3 text-center font-semibold text-[#6d1f2b] transition hover:bg-[#6d1f2b] hover:text-white"
-                >
-                  නිල පෝස්ටරය
-                </a>
               </div>
             </div>
 
-            <div
-              id="poster"
-              className="overflow-hidden rounded-3xl border border-[#b08a57]/20 bg-[#eadfcf] p-3 shadow-xl"
-            >
-              <Image
-                src="/art-competition-2026.jpeg"
-                alt="2026 චිත්‍ර තරඟාවලියේ නිල පෝස්ටරය"
-                width={1200}
-                height={1600}
-                className="w-full rounded-2xl"
-                priority
-              />
-            </div>
           </div>
         </div>
       </section>
@@ -126,30 +85,29 @@ export default function ArtCompetition2026Page() {
               </h2>
 
               <p className="mt-6 text-lg leading-8 text-slate-600">
-                2026 වර්ෂය සඳහා සංවිධානය කර ඇති මෙම චිත්‍ර තරඟාවලිය
+                2026 වර්ෂයේ පැවති මෙම චිත්‍ර තරඟාවලිය
                 දරු දැරියන්ගේ නිර්මාණශීලීත්වය හා කලා හැකියාවන්
                 ඉදිරිපත් කිරීමට අවස්ථාව සලසයි.
               </p>
 
               <p className="mt-5 leading-8 text-slate-600">
-                සහභාගී වීමට පෙර ඔබට අදාළ තරඟ අංශය, නිල මාතෘකාව,
-                ඉදිරිපත් කිරීමේ නීති සහ අයදුම් කිරීමේ ක්‍රමවේදය
-                පරීක්ෂා කිරීම වැදගත් වේ.
+                මෙම පිටුව 2026 තරඟාවලිය පිළිබඳ නිල තොරතුරු සහ වාර්තා සඳහා තබා ඇත.
+                ජයග්‍රාහකයින්ගේ නිල ප්‍රතිඵල ප්‍රතිඵල පිටුවෙන් ලබාගත හැක.
               </p>
             </div>
 
             <div className="rounded-3xl border border-[#b08a57]/20 bg-[#f5efe5] p-8">
               <p className="text-sm font-bold uppercase tracking-[0.15em] text-[#b08a57]">
-                වැදගත් දිනය
+                තරඟ තත්ත්වය
               </p>
 
               <p className="mt-3 text-3xl font-bold text-[#5b1823]">
-                2026 අගෝස්තු 31
+                2026 තරඟය අවසන්
               </p>
 
               <p className="mt-4 leading-7 text-slate-600">
-                නිල ප්‍රචාරක ද්‍රව්‍ය අනුව අයදුම්පත් / නිර්මාණ
-                ඉදිරිපත් කිරීමේ අවසන් දිනය ලෙස දක්වා ඇත.
+                2026 චිත්‍ර තරඟාවලිය සඳහා ඉදිරිපත් කිරීම් අවසන් කර ඇති අතර,
+                ජයග්‍රාහකයින්ගේ නිල ප්‍රතිඵල පහතින් ලබාගත හැක.
               </p>
             </div>
           </div>
@@ -192,64 +150,6 @@ export default function ArtCompetition2026Page() {
         </div>
       </section>
 
-      {/* Theme */}
-      <section className="bg-[#5b1823] py-20 text-white">
-        <div className="mx-auto max-w-5xl px-4 text-center sm:px-6 lg:px-8">
-          <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#e5c990]">
-            Competition Theme
-          </p>
-
-          <h2 className="mt-4 text-4xl font-extrabold leading-tight sm:text-5xl">
-            ඔබේ නිර්මාණශීලීත්වය
-            <br />
-            චිත්‍රයකින් ප්‍රකාශ කරන්න
-          </h2>
-
-          <p className="mx-auto mt-6 max-w-2xl leading-8 text-white/70">
-            නිල poster එකේ සඳහන් මාතෘකාව සහ උපදෙස් අනුව නිර්මාණය
-            සකස් කර ඉදිරිපත් කරන්න.
-          </p>
-        </div>
-      </section>
-
-      {/* Rules */}
-      <section className="bg-white py-20">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#b08a57]">
-              Rules & Instructions
-            </p>
-
-            <h2 className="mt-3 text-3xl font-bold text-[#5b1823] sm:text-4xl">
-              තරඟ නීති හා උපදෙස්
-            </h2>
-          </div>
-
-          <div className="mt-12 grid gap-4">
-            <div className="rounded-2xl border border-slate-200 bg-[#faf8f3] p-6">
-              <p className="font-semibold text-[#5b1823]">
-                නිල පෝස්ටරයේ සහ අයදුම්පත්‍රයේ සඳහන් උපදෙස්
-                අනිවාර්යයෙන් අනුගමනය කරන්න.
-              </p>
-            </div>
-
-            <div className="rounded-2xl border border-slate-200 bg-[#faf8f3] p-6">
-              <p className="leading-7 text-slate-600">
-                අයදුම්කරුට අදාළ තරඟ අංශය නිවැරදිව තෝරා අයදුම්පතේ
-                සියලු තොරතුරු නිවැරදිව සම්පූර්ණ කළ යුතුය.
-              </p>
-            </div>
-
-            <div className="rounded-2xl border border-slate-200 bg-[#faf8f3] p-6">
-              <p className="leading-7 text-slate-600">
-                නියමිත දිනයට පෙර නිර්මාණය ඉදිරිපත් කිරීමට අවශ්‍ය
-                කටයුතු සිදු කළ යුතුය.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Prizes */}
       <section className="bg-[#f5efe5] py-20">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
@@ -285,104 +185,27 @@ export default function ArtCompetition2026Page() {
           </div>
 
           <p className="mt-8 text-center text-sm leading-7 text-slate-500">
-            සම්පූර්ණ ත්‍යාග හා කුසලතා සහතික පිළිබඳ විස්තර නිල
-            තරඟ නිවේදනය අනුව පරීක්ෂා කරන්න.
+            2026 තරඟාවලියේ ජයග්‍රාහකයින් සහ සම්මානලාභීන් සඳහා
+            සහතික හා ත්‍යාග පිරිනැමීම කන්නන්ගර ගුණ සමරු උළෙලේදී සිදු කෙරේ.
           </p>
         </div>
       </section>
 
-      {/* Application Process */}
-      <section id="application" className="bg-white py-20">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#b08a57]">
-              2026 Application Process
-            </p>
-
-            <h2 className="mt-3 text-3xl font-bold text-[#5b1823] sm:text-4xl">
-              2026 සඳහා අයදුම් කරන ආකාරය
-            </h2>
-
-            <p className="mx-auto mt-5 max-w-2xl leading-7 text-slate-600">
-              2026 වර්ෂය සඳහා දැනට භාවිතා වන paper application
-              ක්‍රමවේදය පහත පියවර අනුව සිදු කළ හැක.
-            </p>
-          </div>
-
-          <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-            {steps.map((step) => (
-              <article
-                key={step.number}
-                className="rounded-2xl border border-black/5 bg-[#faf8f3] p-7"
-              >
-                <p className="text-sm font-bold text-[#b08a57]">
-                  {step.number}
-                </p>
-
-                <h3 className="mt-4 text-xl font-bold text-[#5b1823]">
-                  {step.title}
-                </h3>
-
-                <p className="mt-3 leading-7 text-slate-600">
-                  {step.text}
-                </p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Existing Form */}
-      <section className="bg-[#faf8f3] py-20">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
-            <div>
-              <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#b08a57]">
-                Current Form
-              </p>
-
-              <h2 className="mt-3 text-3xl font-bold text-[#5b1823] sm:text-4xl">
-                2026 නිල අයදුම්පත්‍රය
-              </h2>
-
-              <p className="mt-5 leading-8 text-slate-600">
-                2026 වර්ෂය සඳහා භාවිතා වන නිල අයදුම්පත්‍රය මෙහි
-                පෙන්වා ඇත. මෙය reference/documentation purpose සඳහා
-                website එකේ තබාගත හැක.
-              </p>
-
-              <a
-                href="/art-competition-2026-form.jpeg"
-                download
-                className="mt-7 inline-flex rounded-xl bg-[#6d1f2b] px-6 py-3 font-semibold text-white transition hover:bg-[#571822]"
-              >
-                අයදුම්පත්‍රය බාගන්න
-              </a>
-
-              <div className="mt-6 rounded-2xl border border-[#b08a57]/20 bg-[#f5efe5] p-5">
-                <p className="text-sm font-semibold text-[#5b1823]">
-                  2027 සිට
-                </p>
-
-                <p className="mt-2 text-sm leading-6 text-slate-600">
-                  Online application system එක හරහා අයදුම්පත
-                  සම්පූර්ණ කර, generated PDF එක බාගත කර,
-                  අවශ්‍ය අත්සන් / සහතික ලබාගෙන නිර්මාණය සමඟ
-                  තැපැල් කිරීම සඳහා system එක සංවර්ධනය කළ හැක.
-                </p>
-              </div>
-            </div>
-
-            <div className="overflow-hidden rounded-3xl border border-slate-200 bg-white p-3 shadow-sm">
-              <Image
-                src="/art-competition-2026-form.jpeg"
-                alt="2026 නිල චිත්‍ර තරඟ අයදුම්පත්‍රය"
-                width={1200}
-                height={1600}
-                className="h-auto w-full rounded-2xl"
-              />
-            </div>
-          </div>
+      {/* Results */}
+      <section id="results" className="bg-white py-20">
+        <div className="mx-auto max-w-5xl px-4 text-center sm:px-6 lg:px-8">
+          <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#b08a57]">
+            2026 Results
+          </p>
+          <h2 className="mt-3 text-3xl font-bold text-[#5b1823] sm:text-4xl">
+            2026 චිත්‍ර තරඟාවලියේ ප්‍රතිඵල
+          </h2>
+          <p className="mx-auto mt-5 max-w-2xl leading-8 text-slate-600">
+            මෙම තරඟාවලියේ ජයග්‍රාහකයින් සහ සම්මානලාභීන්ගේ නිල ප්‍රතිඵල වෙබ් අඩවියේ ප්‍රතිඵල පිටුවෙන් ලබාගත හැක.
+          </p>
+          <a href="/results" className="mt-7 inline-flex rounded-xl bg-[#6d1f2b] px-6 py-3 font-semibold text-white transition hover:bg-[#571822]">
+            සියලුම ප්‍රතිඵල බලන්න →
+          </a>
         </div>
       </section>
 
@@ -398,8 +221,8 @@ export default function ArtCompetition2026Page() {
           </h2>
 
           <p className="mx-auto mt-5 max-w-2xl leading-8 text-white/70">
-            තරඟ, වැඩසටහන් සහ ඉදිරි අයදුම්පත් පිළිබඳ නවතම
-            නිවේදන සඳහා පදනමේ website එක සමඟ සම්බන්ධව සිටින්න.
+            2026 තරඟාවලියේ නිල ප්‍රතිඵල සහ පදනමේ අනෙකුත් වැඩසටහන් පිළිබඳ
+            තොරතුරු සඳහා වෙබ් අඩවිය සමඟ සම්බන්ධව සිටින්න.
           </p>
 
           <a

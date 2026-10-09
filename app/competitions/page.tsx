@@ -1,84 +1,33 @@
 import Navbar from "../../components/Navbar";
 import Link from "next/link";
 
+const competitions2026 = [
+  { title: "චිත්‍ර තරඟාවලිය", subtitle: "ප්‍රාථමික", description: "දරු දැරියන්ගේ නිර්මාණශීලී හැකියාවන් සහ කලා කුසලතා දිරිගැන්වීම සඳහා පැවති දීප ව්‍යාප්ත චිත්‍ර තරඟාවලියේ ප්‍රාථමික අංශය.", href: "/competitions/2026-art", icon: "✦" },
+  { title: "චිත්‍ර තරඟාවලිය", subtitle: "පශ්චාත් ප්‍රාථමික", description: "දරු දැරියන්ගේ නිර්මාණශීලී හැකියාවන් සහ කලා කුසලතා දිරිගැන්වීම සඳහා පැවති දීප ව්‍යාප්ත චිත්‍ර තරඟාවලියේ පශ්චාත් ප්‍රාථමික අංශය.", href: "/competitions/2026-art", icon: "✦" },
+  { title: "රචනා තරඟාවලිය", subtitle: "කණිෂ්ඨ", description: "භාෂා හැකියාව, අදහස් ප්‍රකාශනය සහ නිර්මාණාත්මක චින්තනය දිරිගැන්වීම සඳහා පැවති රචනා තරඟාවලියේ කණිෂ්ඨ අංශය.", href: "/results", icon: "✎" },
+  { title: "රචනා තරඟාවලිය", subtitle: "ද්විතීක", description: "භාෂා හැකියාව, අදහස් ප්‍රකාශනය සහ නිර්මාණාත්මක චින්තනය දිරිගැන්වීම සඳහා පැවති රචනා තරඟාවලියේ ද්විතීක අංශය.", href: "/results", icon: "✎" },
+  { title: "දැනුම මිනුම තරඟාවලිය", subtitle: "ප්‍රාථමික", description: "පාසල් සිසුන්ගේ දැනුම හා බුද්ධිමය හැකියාවන් වර්ධනය කිරීම අරමුණු කරගත් දැනුම මිනුම තරඟාවලියේ ප්‍රාථමික අංශය.", href: "/results", icon: "?" },
+  { title: "දැනුම මිනුම තරඟාවලිය", subtitle: "ද්විතීක", description: "පාසල් සිසුන්ගේ දැනුම හා බුද්ධිමය හැකියාවන් වර්ධනය කිරීම අරමුණු කරගත් දැනුම මිනුම තරඟාවලියේ ද්විතීක අංශය.", href: "/results", icon: "?" },
+  { title: "කාව්‍ය හා නිසඳැස්", subtitle: "ජ්‍යෙෂ්ඨ", description: "කවි හා නිසඳැස් නිර්මාණ හරහා සිසුන්ගේ සාහිත්‍යමය සහ නිර්මාණාත්මක හැකියාවන් දිරිගැන්වීම සඳහා පැවති තරඟාවලිය.", href: "/results", icon: "❝" },
+  { title: "කාව්‍ය නිර්මාණ තරඟාවලිය", subtitle: "විවෘත", description: "විවෘත අංශය සඳහා පැවති කාව්‍ය නිර්මාණ තරඟාවලිය. ජයග්‍රාහකයින්ගේ ප්‍රතිඵල නිල ප්‍රතිඵල පිටුවෙන් බලන්න.", href: "/results", icon: "❝" },
+  { title: "ශාස්ත්‍රීය ලේඛන තරඟාවලිය", subtitle: "විශ්වවිද්‍යාල සිසුන්", description: "නිදහස් අධ්‍යාපනය ඇතුළු අදාළ මාතෘකා ඔස්සේ ශාස්ත්‍රීය ලිපි සම්පාදනය සඳහා පැවති තරඟාවලිය.", href: "/results", icon: "Aa" },
+];
 
-const currentCompetitions = [
+const highlights = [
   {
-    title: "චිත්‍ර තරඟාවලිය",
-    subtitle: "දීප ව්‍යාප්ත",
-    badge: "Creative",
-    status: "ඉදිරියේදී විවෘත වේ",
-    description:
-      "පාසල් හා පෙර පාසල් දරු දැරියන්ගේ නිර්මාණශීලී හැකියාවන් වර්ධනය කිරීම සඳහා සංවිධානය කරන චිත්‍ර තරඟාවලිය.",
-    categories: ["පෙර පාසල්", "ප්‍රාථමික", "පශ්චාත් ප්‍රාථමික"],
+    title: "නිර්මාණශීලීත්වය",
+    text: "දරු දැරියන්ගේ සහ සිසුන්ගේ නිර්මාණශීලී හැකියාවන් හඳුනාගෙන දිරිගැන්වීම.",
     icon: "✦",
   },
   {
-    title: "රචනා තරඟාවලිය",
-    subtitle: "දීප ව්‍යාප්ත",
-    badge: "Writing",
-    status: "ඉදිරියේදී විවෘත වේ",
-    description:
-      "දරු දැරියන්ගේ භාෂා හැකියාව, අදහස් ප්‍රකාශනය සහ නිර්මාණාත්මක චින්තනය වර්ධනය කිරීම සඳහා පැවැත්වෙන රචනා තරඟය.",
-    categories: ["කණිෂ්ඨ", "ද්විතීක"],
-    icon: "✎",
+    title: "දැනුම හා කුසලතා",
+    text: "දැනුම, චින්තනය, භාෂා හැකියාව සහ විවිධ කුසලතා වර්ධනයට අවස්ථා සැලසීම.",
+    icon: "◆",
   },
   {
-    title: "දැනුම මිනුම තරඟාවලිය",
-    subtitle: "පාසල් කණ්ඩායම්",
-    badge: "Quiz",
-    status: "විස්තර බලන්න",
-    description:
-      "පාසල් නියෝජනය කරන කණ්ඩායම් සඳහා දැනුම හා බුද්ධිමය හැකියාව මැන බැලීම සඳහා සංවිධානය කරන තරඟාවලිය.",
-    categories: ["ප්‍රාථමික", "ද්විතීක"],
-    icon: "?",
-  },
-  {
-    title: "කාව්‍ය හා නිසඳැස්",
-    subtitle: "දීප ව්‍යාප්ත",
-    badge: "Literature",
-    status: "ඉදිරියේදී විවෘත වේ",
-    description:
-      "කවි හා නිසඳැස් නිර්මාණ හරහා ශිෂ්‍යයන්ගේ සාහිත්‍යමය සහ නිර්මාණාත්මක හැකියාවන් දිරිගැන්වීම.",
-    categories: ["12 – 13 ශ්‍රේණි"],
-    icon: "❝",
-  },
-  {
-    title: "ශාස්ත්‍රීය ලේඛන තරඟාවලිය",
-    subtitle: "විශ්වවිද්‍යාල සිසුන්",
-    badge: "Academic",
-    status: "ඉදිරියේදී විවෘත වේ",
-    description:
-      "නිදහස් අධ්‍යාපනය පිළිබඳ ලබාදෙන මාතෘකාවක් ඔස්සේ ශාස්ත්‍රීය ලිපි සම්පාදනය සඳහා වන තරඟාවලිය.",
-    categories: ["විශ්වවිද්‍යාල සිසුන්"],
-    icon: "Aa",
-  },
-];
-
-const processSteps = [
-  {
-    number: "01",
-    title: "තරඟය තෝරන්න",
-    description:
-      "ඔබට සුදුසු තරඟය සහ අංශය තෝරා තරඟ විස්තර පරීක්ෂා කරන්න.",
-  },
-  {
-    number: "02",
-    title: "සුදුසුකම් පරීක්ෂා කරන්න",
-    description:
-      "වයස් සීමා, ශ්‍රේණිය, පාසල සහ අනෙකුත් අවශ්‍යතා පරීක්ෂා කරන්න.",
-  },
-  {
-    number: "03",
-    title: "අයදුම්පත සම්පූර්ණ කරන්න",
-    description:
-      "අයදුම්කරුගේ තොරතුරු සහ අවශ්‍ය නිර්මාණ/ලේඛන ඉදිරිපත් කරන්න.",
-  },
-  {
-    number: "04",
-    title: "අයදුම්පත් අංකය ලබාගන්න",
-    description:
-      "අයදුම් කිරීමෙන් පසු ලබාදෙන Application ID එක සුරක්ෂිතව තබාගන්න.",
+    title: "ඇගයීම හා දිරිගැන්වීම",
+    text: "සහභාගීත්වය සහ ජයග්‍රහණ ඇගයීම සඳහා සහතික, ත්‍යාග සහ අනෙකුත් ඇගයීම්.",
+    icon: "★",
   },
 ];
 
@@ -102,54 +51,55 @@ export default function CompetitionsPage() {
             </h1>
 
             <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-600">
-              දරු දැරියන්ගේ දැනුම, නිර්මාණශීලීත්වය, සාහිත්‍ය හැකියාවන්
-              සහ විවිධ කුසලතා වර්ධනය කිරීම සඳහා සංවිධානය කරන
-              තරඟාවලි සඳහා මෙතැනින් විස්තර ලබාගත හැක.
+              දරු දැරියන්ගේ දැනුම, නිර්මාණශීලීත්වය, සාහිත්‍ය හැකියාවන් සහ
+              විවිධ කුසලතා වර්ධනය කිරීම සඳහා පදනම විසින් සංවිධානය කරන
+              තරඟ වැඩසටහන් පිළිබඳ තොරතුරු මෙතැනින් ලබාගත හැක.
             </p>
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <a
-                href="#current"
+                href="#competitions-2026"
                 className="rounded-xl bg-[#6d1f2b] px-6 py-3 text-center font-semibold text-white transition hover:bg-[#571822]"
               >
-                දැනට පවතින තරඟ
+                2026 තරඟ මාලාව
               </a>
 
-              <a
-                href="#how-to-apply"
+              <Link
+                href="/results"
                 className="rounded-xl border border-[#6d1f2b] px-6 py-3 text-center font-semibold text-[#6d1f2b] transition hover:bg-[#6d1f2b] hover:text-white"
               >
-                අයදුම් කරන ආකාරය
-              </a>
+                ප්‍රතිඵල බලන්න
+              </Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Current competitions */}
-      <section id="current" className="py-20">
+      {/* 2026 Competitions */}
+      <section id="competitions-2026" className="py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
             <div>
               <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#b08a57]">
-                Current Competitions
+                2026 Competition Programme
               </p>
 
               <h2 className="mt-3 text-3xl font-bold text-[#5b1823] sm:text-4xl">
-                අපගේ තරඟාවලි
+                2026 තරඟ මාලාව
               </h2>
             </div>
 
             <p className="max-w-md text-sm leading-6 text-slate-500">
-              තරඟයක් තෝරා එහි සුදුසුකම්, අංශ, නීති සහ අයදුම් කිරීමේ
-              ක්‍රියාවලිය පිළිබඳ වැඩි විස්තර බලන්න.
+              2026 වර්ෂයේ පවත්වන ලද තරඟ වැඩසටහන් පිළිබඳ තොරතුරු පහතින්
+              දැක්වේ. ජයග්‍රාහකයින්ගේ සහ සම්මානලාභීන්ගේ නිල ප්‍රතිඵල
+              ප්‍රතිඵල පිටුවෙන් ලබාගත හැක.
             </p>
           </div>
 
           <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-            {currentCompetitions.map((competition) => (
+            {competitions2026.map((competition) => (
               <article
-                key={competition.title}
+                key={`${competition.title}-${competition.subtitle}`}
                 className="group flex h-full flex-col rounded-3xl border border-black/5 bg-white p-7 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl"
               >
                 <div className="flex items-start justify-between gap-4">
@@ -158,7 +108,7 @@ export default function CompetitionsPage() {
                   </div>
 
                   <span className="rounded-full border border-[#b08a57]/20 bg-[#f5efe5] px-3 py-1 text-xs font-semibold text-[#7d6038]">
-                    {competition.badge}
+                    2026
                   </span>
                 </div>
 
@@ -174,33 +124,12 @@ export default function CompetitionsPage() {
                   {competition.description}
                 </p>
 
-                <div className="mt-5 flex flex-wrap gap-2">
-                  {competition.categories.map((category) => (
-                    <span
-                      key={category}
-                      className="rounded-lg bg-[#f7f3ec] px-3 py-1.5 text-xs font-medium text-slate-600"
-                    >
-                      {category}
-                    </span>
-                  ))}
-                </div>
-
                 <div className="mt-auto pt-7">
-                  <div className="mb-4 flex items-center justify-between border-t border-slate-100 pt-4">
-                    <span className="text-xs font-semibold uppercase tracking-wide text-slate-400">
-                      Status
-                    </span>
-
-                    <span className="text-xs font-semibold text-[#6d1f2b]">
-                      {competition.status}
-                    </span>
-                  </div>
-
                   <Link
-                    href="/competitions/2026-art"
+                    href={competition.href}
                     className="block w-full rounded-xl bg-[#f5efe5] px-5 py-3 text-center font-semibold text-[#6d1f2b] transition hover:bg-[#6d1f2b] hover:text-white"
                   >
-                    විස්තර බලන්න →
+                    ප්‍රතිඵල බලන්න →
                   </Link>
                 </div>
               </article>
@@ -209,76 +138,41 @@ export default function CompetitionsPage() {
         </div>
       </section>
 
-      {/* Categories */}
+      {/* Programme Purpose */}
       <section className="bg-[#5b1823] py-20 text-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#e5c990]">
-              Competition Categories
+              Our Purpose
             </p>
 
             <h2 className="mt-3 text-3xl font-bold sm:text-4xl">
-              විවිධ හැකියාවන් සඳහා විවිධ අවස්ථා
+              තරඟ වැඩසටහන් තුළින් දරුවන්ගේ හැකියාවන් දිරිගැන්වීම
             </h2>
 
             <p className="mt-5 leading-8 text-white/70">
-              වයස් කාණ්ඩය, ශ්‍රේණිය සහ තරඟයේ ස්වභාවය අනුව වෙනස් වන
-              අංශ සඳහා සහභාගී වීමට අවස්ථා සලසා ඇත.
+              කන්නන්ගර පදනමේ තරඟ වැඩසටහන් අධ්‍යාපනය, නිර්මාණශීලීත්වය,
+              සාහිත්‍යය සහ දැනුම වැනි විවිධ ක්ෂේත්‍ර ඔස්සේ දරු පරපුරේ
+              හැකියාවන් ඉදිරියට ගෙන යාම සඳහා අවස්ථා සලසයි.
             </p>
           </div>
 
-          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-5">
-            {[
-              "චිත්‍ර",
-              "රචනා",
-              "දැනුම මිනුම",
-              "කාව්‍ය / නිසඳැස්",
-              "ශාස්ත්‍රීය ලේඛන",
-            ].map((category) => (
-              <div
-                key={category}
-                className="rounded-2xl border border-white/10 bg-white/10 p-6 text-center"
+          <div className="mt-12 grid gap-5 md:grid-cols-3">
+            {highlights.map((highlight) => (
+              <article
+                key={highlight.title}
+                className="rounded-2xl border border-white/10 bg-white/10 p-7 backdrop-blur"
               >
-                <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-[#e5c990] font-bold text-[#5b1823]">
-                  ✓
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#e5c990] font-bold text-[#5b1823]">
+                  {highlight.icon}
                 </div>
 
-                <p className="mt-4 font-semibold">{category}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* How to apply */}
-      <section id="how-to-apply" className="bg-white py-20">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#b08a57]">
-              How to Apply
-            </p>
-
-            <h2 className="mt-3 text-3xl font-bold text-[#5b1823] sm:text-4xl">
-              තරඟයක් සඳහා අයදුම් කරන්නේ කෙසේද?
-            </h2>
-          </div>
-
-          <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-            {processSteps.map((step) => (
-              <article
-                key={step.number}
-                className="rounded-2xl border border-black/5 bg-[#faf8f3] p-7"
-              >
-                <p className="text-sm font-bold text-[#b08a57]">
-                  {step.number}
-                </p>
-
-                <h3 className="mt-4 text-xl font-bold text-[#5b1823]">
-                  {step.title}
+                <h3 className="mt-5 text-xl font-bold">
+                  {highlight.title}
                 </h3>
 
-                <p className="mt-3 leading-7 text-slate-600">
-                  {step.description}
+                <p className="mt-3 leading-7 text-white/70">
+                  {highlight.text}
                 </p>
               </article>
             ))}
@@ -286,58 +180,95 @@ export default function CompetitionsPage() {
         </div>
       </section>
 
-      {/* Important notice */}
-      <section className="py-20">
+      {/* Awards */}
+      <section className="bg-white py-20">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-          <div className="rounded-3xl border border-[#b08a57]/20 bg-[#f5efe5] p-8 sm:p-10">
-            <div className="flex flex-col gap-6 md:flex-row md:items-start">
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#6d1f2b] font-bold text-white">
-                !
-              </div>
+          <div className="text-center">
+            <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#b08a57]">
+              Recognition
+            </p>
 
-              <div>
-                <p className="text-sm font-bold uppercase tracking-[0.15em] text-[#b08a57]">
-                  Important
-                </p>
+            <h2 className="mt-3 text-3xl font-bold text-[#5b1823] sm:text-4xl">
+              සහභාගීත්වය හා ජයග්‍රහණ ඇගයීම
+            </h2>
 
-                <h2 className="mt-2 text-2xl font-bold text-[#5b1823]">
-                  අයදුම් කිරීමට පෙර තරඟ නීති පරීක්ෂා කරන්න
-                </h2>
+            <p className="mx-auto mt-5 max-w-2xl leading-8 text-slate-600">
+              2026 තරඟ මාලාවේ ජයග්‍රාහකයින් සහ සම්මානලාභීන් සඳහා සහතික,
+              ත්‍යාග සහ අනෙකුත් ඇගයීම් පිරිනැමීම කන්නන්ගර ගුණ සමරු උළෙලේදී සිදු කෙරේ.
+            </p>
+          </div>
 
-                <p className="mt-4 leading-8 text-slate-600">
-                  එක් එක් තරඟයට අදාළ සුදුසුකම්, වයස් හෝ ශ්‍රේණි සීමා,
-                  නිර්මාණ ඉදිරිපත් කිරීමේ ආකාරය, වචන සීමා සහ අනෙකුත්
-                  නීති වෙනස් විය හැක. අයදුම් කිරීමට පෙර තරඟයේ
-                  සම්පූර්ණ විස්තර කියවීම අනිවාර්ය වේ.
-                </p>
-              </div>
-            </div>
+          <div className="mt-10 rounded-3xl border border-[#b08a57]/20 bg-[#f5efe5] p-8 text-center sm:p-10">
+            <p className="text-lg font-semibold text-[#5b1823]">
+              2026 තරඟ ජයග්‍රාහකයන් සහ සහභාගී වූවන් සඳහා වන ඇගයීම්
+            </p>
+
+            <p className="mt-3 leading-7 text-slate-600">
+              2026 තරඟ මාලාවේ නිල ප්‍රතිඵල දැන් වෙබ් අඩවියේ ප්‍රකාශයට පත් කර ඇත.
+            </p>
+
+            <Link
+              href="/results"
+              className="mt-6 inline-flex rounded-xl bg-[#6d1f2b] px-6 py-3 font-semibold text-white transition hover:bg-[#571822]"
+            >
+              ප්‍රතිඵල වෙත යන්න →
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* CTA */}
+      {/* Archive / Updates */}
+      <section className="py-20">
+        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+          <div className="rounded-3xl border border-[#b08a57]/20 bg-white p-8 shadow-sm sm:p-10">
+            <p className="text-sm font-bold uppercase tracking-[0.15em] text-[#b08a57]">
+              2026 Archive
+            </p>
+            <h2 className="mt-3 text-2xl font-bold text-[#5b1823] sm:text-3xl">
+              2026 තරඟ මාලාවේ නිල ප්‍රතිඵල
+            </h2>
+            <p className="mt-4 leading-8 text-slate-600">
+              මෙම වසරේ පැවති තරඟවල ජයග්‍රාහකයින් සහ සම්මානලාභීන්ගේ ප්‍රතිඵල
+              තරඟ අංශය අනුව සොයාගත හැක.
+            </p>
+            <Link href="/results" className="mt-6 inline-flex font-semibold text-[#6d1f2b]">
+              සියලුම ප්‍රතිඵල බලන්න →
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Final CTA */}
       <section className="bg-[#f5efe5] py-20">
         <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
           <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#b08a57]">
-            Ready to Participate?
+            Kannangara Foundation
           </p>
 
           <h2 className="mt-3 text-3xl font-bold text-[#5b1823] sm:text-4xl">
-            ඔබගේ හැකියාව ඉදිරියට ගෙන යන්න
+            කන්නන්ගර පදනමේ වැඩසටහන් සමඟ සම්බන්ධව සිටින්න
           </h2>
 
           <p className="mx-auto mt-5 max-w-2xl leading-8 text-slate-600">
-            ඔබට ගැළපෙන තරඟය තෝරා තරඟ නීති සහ අයදුම් කිරීමේ විස්තර
-            පරීක්ෂා කරන්න.
+            පදනමේ ඉදිරි වැඩසටහන්, නිවේදන සහ ප්‍රතිඵල සඳහා නිල වෙබ් අඩවිය
+            නිරීක්ෂණය කරන්න.
           </p>
 
-          <a
-            href="#current"
-            className="mt-8 inline-flex rounded-xl bg-[#6d1f2b] px-7 py-3 font-semibold text-white transition hover:bg-[#571822]"
-          >
-            තරඟ බලන්න
-          </a>
+          <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
+            <Link
+              href="/news"
+              className="rounded-xl bg-[#6d1f2b] px-7 py-3 font-semibold text-white transition hover:bg-[#571822]"
+            >
+              නවතම පුවත්
+            </Link>
+
+            <Link
+              href="/contact"
+              className="rounded-xl border border-[#6d1f2b] px-7 py-3 font-semibold text-[#6d1f2b] transition hover:bg-[#6d1f2b] hover:text-white"
+            >
+              සම්බන්ධ වන්න
+            </Link>
+          </div>
         </div>
       </section>
 
