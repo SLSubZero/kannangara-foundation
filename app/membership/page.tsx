@@ -24,8 +24,8 @@ export default function MembershipPage() {
               <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-600">
                 ආචාර්ය සී.ඩබ්ලිව්.ඩබ්ලිව්. කන්නන්ගර ශ්‍රීමතාණන්ගේ
                 අධ්‍යාපනික දැක්ම හා සමාජීය උරුමය ඉදිරියට ගෙන යන
-                පදනමේ මෙහෙවර සමඟ සම්බන්ධ වීමට ඔබගේ සාමාජිකත්ව
-                අයදුම්පත යොමු කරන්න.
+                පදනමේ මෙහෙවර සමඟ සම්බන්ධ වීමට සාමාජිකත්වය පිළිබඳ
+                වැඩිදුර තොරතුරු ලබාගැනීමට අප හා සම්බන්ධ වන්න.
               </p>
 
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -33,7 +33,7 @@ export default function MembershipPage() {
                   href="#application"
                   className="rounded-xl bg-[#6d1f2b] px-6 py-3 text-center font-semibold text-white transition hover:bg-[#571822]"
                 >
-                  සාමාජිකත්ව අයදුම්පත
+                  සාමාජිකත්වය පිළිබඳ විමසීම්
                 </a>
 
                 <a
@@ -83,8 +83,7 @@ export default function MembershipPage() {
             </h2>
 
             <p className="mt-5 leading-8 text-slate-600">
-              පහත අයදුම්පතේ අවශ්‍ය තොරතුරු නිවැරදිව ඇතුළත් කර
-              පදනම වෙත යොමු කරන්න.
+              දැනට online අයදුම්පත් පහසුකම සකස් කරමින් පවතී. සාමාජිකත්වය පිළිබඳ විමසීම් සඳහා පහත සම්බන්ධතා භාවිත කරන්න.
             </p>
           </div>
 
@@ -95,12 +94,12 @@ export default function MembershipPage() {
               </div>
 
               <h3 className="mt-5 text-xl font-bold text-[#5b1823]">
-                තොරතුරු ඇතුළත් කරන්න
+                අප හා සම්බන්ධ වන්න
               </h3>
 
               <p className="mt-3 leading-7 text-slate-600">
-                ඔබගේ මූලික පුද්ගලික හා සම්බන්ධතා තොරතුරු
-                නිවැරදිව සම්පූර්ණ කරන්න.
+                සාමාජිකත්වය පිළිබඳ තොරතුරු ලබාගැනීමට
+                පදනම සමඟ සම්බන්ධ වන්න.
               </p>
             </article>
 
@@ -110,12 +109,12 @@ export default function MembershipPage() {
               </div>
 
               <h3 className="mt-5 text-xl font-bold text-[#5b1823]">
-                තොරතුරු පරීක්ෂා කරන්න
+                සාමාජිකත්ව වර්ග දැනගන්න
               </h3>
 
               <p className="mt-3 leading-7 text-slate-600">
-                Submit කිරීමට පෙර ඔබ ඇතුළත් කළ තොරතුරු නැවත
-                පරීක්ෂා කරන්න.
+                ඔබට ගැළපෙන සාමාජිකත්ව වර්ගය පිළිබඳ
+                විස්තර ලබාගන්න.
               </p>
             </article>
 
@@ -125,12 +124,12 @@ export default function MembershipPage() {
               </div>
 
               <h3 className="mt-5 text-xl font-bold text-[#5b1823]">
-                අයදුම්පත යොමු කරන්න
+                විමසීමක් කරන්න
               </h3>
 
               <p className="mt-3 leading-7 text-slate-600">
-                සම්පූර්ණ කළ අයදුම්පත පදනම වෙත යොමු කිරීම සඳහා
-                Submit කරන්න.
+                දුරකථනයෙන් හෝ email මඟින් පදනම වෙත
+                ඔබගේ විමසීම යොමු කරන්න.
               </p>
             </article>
           </div>
@@ -237,358 +236,47 @@ export default function MembershipPage() {
             </p>
           </div>
 
-          <form
-            action="#"
-            method="POST"
-            className="rounded-3xl border border-black/5 bg-white p-6 shadow-xl sm:p-8 lg:p-10"
-          >
-            {/* Personal Information */}
-            <div>
-              <p className="text-sm font-bold uppercase tracking-[0.15em] text-[#b08a57]">
-                Personal Information
-              </p>
+          <div className="rounded-3xl border border-[#b08a57]/25 bg-white p-6 shadow-xl sm:p-8 lg:p-10">
+            <p className="text-sm font-bold uppercase tracking-[0.15em] text-[#b08a57]">
+              Membership Applications
+            </p>
 
-              <h3 className="mt-2 text-xl font-bold text-[#5b1823]">
-                පුද්ගලික තොරතුරු
-              </h3>
-            </div>
+            <h3 className="mt-3 text-2xl font-bold text-[#5b1823]">
+              සාමාජිකත්වය සඳහා විමසීම්
+            </h3>
 
-            <div className="mt-7 space-y-6">
-              {/* Full Name */}
-              <div>
-                <label
-                  htmlFor="fullName"
-                  className="mb-2 block text-sm font-semibold text-slate-700"
-                >
-                  සම්පූර්ණ නම Full Name{" "}
-                  <span className="text-red-600">*</span>
-                </label>
+            <p className="mt-4 leading-8 text-slate-600">
+              Online සාමාජිකත්ව අයදුම්පත් පහසුකම සකස් කරමින් පවතී.
+              දැනට සාමාජිකත්වය පිළිබඳ වැඩිදුර තොරතුරු ලබාගැනීමට
+              කරුණාකර පදනම සමඟ සම්බන්ධ වන්න.
+            </p>
 
-                <input
-                  id="fullName"
-                  name="fullName"
-                  type="text"
-                  required
-                  className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3.5 outline-none transition focus:border-[#6d1f2b] focus:ring-2 focus:ring-[#6d1f2b]/10"
-                />
-              </div>
-
-              {/* Address */}
-              <div>
-                <label
-                  htmlFor="address"
-                  className="mb-2 block text-sm font-semibold text-slate-700"
-                >
-                  ලිපිනය Address <span className="text-red-600">*</span>
-                </label>
-
-                <textarea
-                  id="address"
-                  name="address"
-                  required
-                  rows={3}
-                  className="w-full resize-y rounded-xl border border-slate-200 bg-white px-4 py-3.5 outline-none transition focus:border-[#6d1f2b] focus:ring-2 focus:ring-[#6d1f2b]/10"
-                />
-              </div>
-
-              {/* District */}
-              <div>
-                <label
-                  htmlFor="district"
-                  className="mb-2 block text-sm font-semibold text-slate-700"
-                >
-                  දිස්ත්‍රික්කය District :-{" "}
-                  <span className="text-red-600">*</span>
-                </label>
-
-                <select
-                  id="district"
-                  name="district"
-                  required
-                  defaultValue=""
-                  className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3.5 outline-none transition focus:border-[#6d1f2b] focus:ring-2 focus:ring-[#6d1f2b]/10"
-                >
-                  <option value="" disabled>
-                    Choose
-                  </option>
-                  <option>Ampara</option>
-                  <option>Anuradhapura</option>
-                  <option>Badulla</option>
-                  <option>Batticaloa</option>
-                  <option>Colombo</option>
-                  <option>Galle</option>
-                  <option>Gampaha</option>
-                  <option>Hambantota</option>
-                  <option>Jaffna</option>
-                  <option>Kalutara</option>
-                  <option>Kandy</option>
-                  <option>Kegalle</option>
-                  <option>Killinochchi</option>
-                  <option>Kurunegala</option>
-                  <option>Mannar</option>
-                  <option>Matale</option>
-                  <option>Matara</option>
-                  <option>Monaragala</option>
-                  <option>Mullaitivu</option>
-                  <option>Nuwara Eliya</option>
-                  <option>Polonnaruwa</option>
-                  <option>Puttalam</option>
-                  <option>Ratnapura</option>
-                  <option>Trincomalee</option>
-                  <option>Vavuniya</option>
-                </select>
-              </div>
-
-              {/* GN Division */}
-              <div>
-                <label
-                  htmlFor="gnDivision"
-                  className="mb-2 block text-sm font-semibold text-slate-700"
-                >
-                  ග්‍රාම නිලධාරී වසම Grama Niladhari Division{" "}
-                  <span className="text-red-600">*</span>
-                </label>
-
-                <input
-                  id="gnDivision"
-                  name="gnDivision"
-                  type="text"
-                  required
-                  className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3.5 outline-none transition focus:border-[#6d1f2b] focus:ring-2 focus:ring-[#6d1f2b]/10"
-                />
-              </div>
-
-              {/* Date of Birth */}
-              <div>
-                <label
-                  htmlFor="dateOfBirth"
-                  className="mb-2 block text-sm font-semibold text-slate-700"
-                >
-                  උපන්දිනය Date of Birth{" "}
-                  <span className="text-red-600">*</span>
-                </label>
-
-                <input
-                  id="dateOfBirth"
-                  name="dateOfBirth"
-                  type="date"
-                  required
-                  className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3.5 outline-none transition focus:border-[#6d1f2b] focus:ring-2 focus:ring-[#6d1f2b]/10"
-                />
-              </div>
-
-              {/* NIC */}
-              <div>
-                <label
-                  htmlFor="nic"
-                  className="mb-2 block text-sm font-semibold text-slate-700"
-                >
-                  ජාතික හැඳුනුම්පත් අංකය National ID Number{" "}
-                  <span className="text-red-600">*</span>
-                </label>
-
-                <input
-                  id="nic"
-                  name="nic"
-                  type="text"
-                  required
-                  className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3.5 outline-none transition focus:border-[#6d1f2b] focus:ring-2 focus:ring-[#6d1f2b]/10"
-                />
-              </div>
-
-              {/* Higher educational qualification */}
-              <div>
-                <label
-                  htmlFor="qualification"
-                  className="mb-2 block text-sm font-semibold text-slate-700"
-                >
-                  ඉහළම අධ්‍යාපන සුදුසුකම Higher educational qualification{" "}
-                  <span className="text-red-600">*</span>
-                </label>
-
-                <input
-                  id="qualification"
-                  name="qualification"
-                  type="text"
-                  required
-                  className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3.5 outline-none transition focus:border-[#6d1f2b] focus:ring-2 focus:ring-[#6d1f2b]/10"
-                />
-              </div>
-
-              {/* Occupation */}
-              <div>
-                <label
-                  htmlFor="occupation"
-                  className="mb-2 block text-sm font-semibold text-slate-700"
-                >
-                  රැකියාව Occupation
-                </label>
-
-                <input
-                  id="occupation"
-                  name="occupation"
-                  type="text"
-                  className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3.5 outline-none transition focus:border-[#6d1f2b] focus:ring-2 focus:ring-[#6d1f2b]/10"
-                />
-              </div>
-            </div>
-
-            {/* Contact Details */}
-            <div className="mt-10 border-t border-slate-100 pt-8">
-              <p className="text-sm font-bold uppercase tracking-[0.15em] text-[#b08a57]">
-                Contact Details
-              </p>
-
-              <h3 className="mt-2 text-xl font-bold text-[#5b1823]">
-                සම්බන්ධතා තොරතුරු
-              </h3>
-            </div>
-
-            <div className="mt-7 space-y-6">
-              {/* WhatsApp */}
-              <div>
-                <label
-                  htmlFor="whatsapp"
-                  className="mb-2 block text-sm font-semibold text-slate-700"
-                >
-                  Whatsapp Number WhatsApp අංකය
-                </label>
-
-                <input
-                  id="whatsapp"
-                  name="whatsapp"
-                  type="tel"
-                  className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3.5 outline-none transition focus:border-[#6d1f2b] focus:ring-2 focus:ring-[#6d1f2b]/10"
-                />
-              </div>
-
-              {/* Email */}
-              <div>
-                <label
-                  htmlFor="email"
-                  className="mb-2 block text-sm font-semibold text-slate-700"
-                >
-                  email
-                </label>
-
-                <input
-                  id="email"
-                  name="email"
-                  type="email"
-                  className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3.5 outline-none transition focus:border-[#6d1f2b] focus:ring-2 focus:ring-[#6d1f2b]/10"
-                />
-              </div>
-            </div>
-
-            {/* Membership Category */}
-            <div className="mt-10 border-t border-slate-100 pt-8">
-              <p className="text-sm font-bold uppercase tracking-[0.15em] text-[#b08a57]">
-                Membership Category
-              </p>
-
-              <h3 className="mt-2 text-xl font-bold text-[#5b1823]">
-                අයදුම් කරන සාමාජිකත්ව ප්‍රවර්ගය{" "}
-                <span className="text-red-600">*</span>
-              </h3>
-
-              <div className="mt-6 space-y-4">
-                <label className="flex cursor-pointer items-center gap-3 rounded-xl border border-slate-200 p-4 transition hover:border-[#b08a57]">
-                  <input
-                    type="radio"
-                    name="membershipCategory"
-                    value="full"
-                    required
-                    className="h-5 w-5 accent-[#6d1f2b]"
-                  />
-                  <span className="font-medium text-slate-700">
-                    පූර්ණ සාමාජික Full Member
-                  </span>
-                </label>
-
-                <label className="flex cursor-pointer items-center gap-3 rounded-xl border border-slate-200 p-4 transition hover:border-[#b08a57]">
-                  <input
-                    type="radio"
-                    name="membershipCategory"
-                    value="hon"
-                    className="h-5 w-5 accent-[#6d1f2b]"
-                  />
-                  <span className="font-medium text-slate-700">
-                    ගරු සාමාජික Hon. Member
-                  </span>
-                </label>
-              </div>
-            </div>
-
-            {/* Social Services */}
-            <div className="mt-10 border-t border-slate-100 pt-8">
-              <label
-                htmlFor="socialServices"
-                className="mb-2 block text-sm font-semibold text-slate-700"
+            <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+              <a
+                href="tel:0714494392"
+                className="rounded-xl bg-[#6d1f2b] px-6 py-3 text-center font-semibold text-white transition hover:bg-[#571822]"
               >
-                ඔබ සමාජ සේවා සඳහා සම්බන්ධවී ඇති විස්තර
+                දුරකථනයෙන් විමසන්න
+              </a>
+
+              <a
+                href="mailto:kannangaramf@gmail.com"
+                className="rounded-xl border border-[#6d1f2b] px-6 py-3 text-center font-semibold text-[#6d1f2b] transition hover:bg-[#6d1f2b] hover:text-white"
+              >
+                Email යවන්න
+              </a>
+            </div>
+
+            <div className="mt-6 rounded-2xl bg-[#f5efe5] p-5">
+              <p className="text-sm leading-7 text-slate-700">
+                <span className="font-semibold text-[#5b1823]">දුරකථන:</span>{" "}
+                071 449 4392
                 <br />
-                Details about if you are involved in social services
-              </label>
-
-              <textarea
-                id="socialServices"
-                name="socialServices"
-                rows={5}
-                className="w-full resize-y rounded-xl border border-slate-200 bg-white px-4 py-3.5 outline-none transition focus:border-[#6d1f2b] focus:ring-2 focus:ring-[#6d1f2b]/10"
-              />
-            </div>
-
-            {/* Agreement */}
-            <div className="mt-10 border-t border-slate-100 pt-8">
-              <label className="flex cursor-pointer items-start gap-3 rounded-2xl border border-[#b08a57]/25 bg-[#f5efe5] p-5">
-                <input
-                  id="agreement"
-                  name="agreement"
-                  type="checkbox"
-                  required
-                  className="mt-1 h-5 w-5 shrink-0 accent-[#6d1f2b]"
-                />
-
-                <span className="text-sm leading-7 text-slate-700">
-                  ඉහත තොරතුරු සත්‍ය බවත් ආචාර්ය සී.ඩබ්ලිව්.ඩබ්ලිව්.
-                  කන්නන්ගර ගුණානුස්මරණ පදනමේ ව්‍යවස්ථාවට අනුව කටයුතු
-                  කරන බවත් මම මෙයින් දන්වමි. I hereby inform you that the
-                  above information is true and in accordance with the
-                  Constitution of the Dr. C W W Kannangara Commemorative
-                  Foundation.
-                </span>
-              </label>
-            </div>
-
-            {/* Notice */}
-            <div className="mt-8 rounded-2xl border border-[#b08a57]/20 bg-[#f5efe5] p-5">
-              <p className="text-sm font-semibold text-[#5b1823]">
-                වැදගත්
-              </p>
-
-              <p className="mt-2 text-sm leading-6 text-slate-600">
-                අයදුම්පත යොමු කිරීමට පෙර සියලු තොරතුරු නිවැරදි බව
-                පරීක්ෂා කරන්න.
+                <span className="font-semibold text-[#5b1823]">Email:</span>{" "}
+                kannangaramf@gmail.com
               </p>
             </div>
-
-            {/* Buttons */}
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-end">
-              <button
-                type="reset"
-                className="rounded-xl border border-slate-300 px-6 py-3 font-semibold text-slate-600 transition hover:bg-slate-50"
-              >
-                මකන්න
-              </button>
-
-              <button
-                type="submit"
-                className="rounded-xl bg-[#6d1f2b] px-7 py-3 font-semibold text-white transition hover:bg-[#571822]"
-              >
-                අයදුම්පත යොමු කරන්න
-              </button>
-            </div>
-          </form>
+          </div>
         </div>
       </section>
 
@@ -611,7 +299,7 @@ export default function MembershipPage() {
             href="#application"
             className="mt-8 inline-flex rounded-xl bg-[#6d1f2b] px-7 py-3 font-semibold text-white transition hover:bg-[#571822]"
           >
-            අයදුම්පත පුරවන්න
+            සාමාජිකත්වය පිළිබඳ විමසන්න
           </a>
         </div>
       </section>
