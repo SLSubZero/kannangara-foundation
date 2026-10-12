@@ -7,6 +7,8 @@ const STORAGE_KEY = "kannangara-launch-welcome-seen";
 export default function LaunchWelcome() {
   const [isOpen, setIsOpen] = useState(false);
   const [isReady, setIsReady] = useState(false);
+  const [isLaunching, setIsLaunching] = useState(false);
+  const [showFoundationIntro, setShowFoundationIntro] = useState(false);
 
   useEffect(() => {
     try {
@@ -48,9 +50,47 @@ export default function LaunchWelcome() {
     setIsOpen(false);
   }
 
-  if (!isReady || !isOpen) return null;
+  function launchWebsite() {
+    if (isLaunching) return;
+
+    setIsLaunching(true);
+
+    window.setTimeout(() => {
+      setShowFoundationIntro(true);
+      window.setTimeout(() => {
+        setShowFoundationIntro(false);
+        closeWelcome();
+      }, 5000);
+    }, 250);
+  }
+
+  if (!isReady || (!isOpen && !showFoundationIntro)) return null;
 
   return (
+    <>
+      {showFoundationIntro && (
+        <div className="foundation-intro-overlay" role="status" aria-live="polite">
+          <div className="foundation-intro-content">
+            <img
+              src="/foundation-logo.png"
+              alt="Dr. C.W.W. Kannangara Commemorative Foundation logo"
+              className="foundation-intro-logo"
+              width="220"
+              height="220"
+            />
+            <p lang="si" className="foundation-intro-name foundation-intro-sinhala">
+              ආචාර්ය සී. ඩබ්ලිව්. ඩබ්ලිව්. කන්නන්ගර ගුණානුස්මරණ පදනම
+            </p>
+            <p lang="en" className="foundation-intro-name foundation-intro-english">
+              DR. C.W.W. KANNANGARA COMMEMORATIVE FOUNDATION
+            </p>
+            <p lang="ta" className="foundation-intro-name foundation-intro-tamil">
+              டாக்டர் சி.டபிள்யூ.டபிள்யூ. கண்ணங்கரா நினைவு அறக்கட்டளை
+            </p>
+          </div>
+        </div>
+      )}
+      {isOpen && (
     <div
       className="launch-welcome-overlay"
       role="dialog"
@@ -108,19 +148,94 @@ export default function LaunchWelcome() {
         <button
           type="button"
           className="launch-welcome-button"
-          onClick={closeWelcome}
+          onClick={launchWebsite}
+          disabled={isLaunching}
           autoFocus
         >
-          වෙබ් අඩවියට පිවිසෙන්න
-          <span aria-hidden="true">→</span>
+          {isLaunching ? "නිල වෙබ් අඩවිය විවෘත වෙමින්..." : "වෙබ් අඩවියට පිවිසෙන්න!"}
+          <span aria-hidden="true">{isLaunching ? "✦" : "→"}</span>
         </button>
 
-        <p className="launch-welcome-hint">
-          ඉදිරියට යාමට ඉහත බොත්තම ඔබන්න
-        </p>
       </div>
 
+    </div>
+      )}
       <style jsx>{`
+        .foundation-intro-overlay {
+          position: fixed;
+          inset: 0;
+          z-index: 10005;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 24px;
+          background: rgba(9, 19, 32, 0.76);
+          backdrop-filter: blur(7px);
+          animation: foundationIntroFadeIn 500ms ease-out both;
+        }
+
+        .foundation-intro-content {
+          display: flex;
+          width: min(900px, 100%);
+          flex-direction: column;
+          align-items: center;
+          gap: 18px;
+          text-align: center;
+          animation: foundationIntroRise 650ms cubic-bezier(.2,.8,.2,1) both;
+        }
+
+        .foundation-intro-logo {
+          display: block;
+          width: clamp(150px, 24vw, 240px);
+          height: auto;
+          max-height: 32vh;
+          margin: 0 auto;
+          object-fit: contain;
+          filter: drop-shadow(0 12px 28px rgba(0,0,0,.22));
+        }
+
+        .foundation-intro-name {
+          margin: 0;
+          color: #fffaf0;
+          text-wrap: balance;
+          line-height: 1.55;
+          text-shadow: 0 2px 18px rgba(0,0,0,.2);
+        }
+
+        .foundation-intro-sinhala {
+          color: #f1d28a;
+          font-size: clamp(17px, 2.3vw, 25px);
+          font-weight: 700;
+        }
+
+        .foundation-intro-english {
+          font-size: clamp(13px, 1.7vw, 20px);
+          font-weight: 650;
+          letter-spacing: .045em;
+        }
+
+        .foundation-intro-tamil {
+          font-size: clamp(15px, 2vw, 22px);
+          font-weight: 600;
+        }
+
+        @keyframes foundationIntroFadeIn {
+          from { opacity: 0; }
+          to { opacity: 1; }
+        }
+
+        @keyframes foundationIntroRise {
+          from { opacity: 0; transform: translateY(18px) scale(.985); }
+          to { opacity: 1; transform: translateY(0) scale(1); }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+          .foundation-intro-overlay,
+          .foundation-intro-content {
+            animation: none !important;
+          }
+        }
+
         .launch-welcome-overlay {
           position: fixed;
           inset: 0;
@@ -245,6 +360,12 @@ export default function LaunchWelcome() {
           transition: transform 180ms ease;
         }
 
+        .launch-welcome-button:disabled {
+          cursor: wait;
+          animation: none;
+          transform: scale(0.98);
+        }
+
         .launch-welcome-button:hover {
           transform: translateY(-2px);
           background: linear-gradient(135deg, #ffe7a2, #e0b95f);
@@ -352,6 +473,6 @@ export default function LaunchWelcome() {
           }
         }
       `}</style>
-    </div>
+    </>
   );
 }
