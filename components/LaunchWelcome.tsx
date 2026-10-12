@@ -56,7 +56,9 @@ export default function LaunchWelcome() {
     setIsLaunching(true);
 
     window.setTimeout(() => {
+      setIsOpen(false);
       setShowFoundationIntro(true);
+
       window.setTimeout(() => {
         setShowFoundationIntro(false);
         closeWelcome();
@@ -69,7 +71,12 @@ export default function LaunchWelcome() {
   return (
     <>
       {showFoundationIntro && (
-        <div className="foundation-intro-overlay" role="status" aria-live="polite">
+        <div
+          className="foundation-intro-overlay"
+          role="status"
+          aria-live="polite"
+          style={{ display: "flex", position: "fixed", inset: 0, zIndex: 10050 }}
+        >
           <div className="foundation-intro-content">
             <img
               src="/foundation-logo.png"
@@ -77,6 +84,7 @@ export default function LaunchWelcome() {
               className="foundation-intro-logo"
               width="220"
               height="220"
+              style={{ display: "block", width: "min(240px, 55vw)", height: "auto", objectFit: "contain" }}
             />
             <p lang="si" className="foundation-intro-name foundation-intro-sinhala">
               ආචාර්ය සී. ඩබ්ලිව්. ඩබ්ලිව්. කන්නන්ගර ගුණානුස්මරණ පදනම
@@ -142,7 +150,7 @@ export default function LaunchWelcome() {
         <div className="launch-welcome-divider" />
 
         <p className="launch-welcome-motto">
-          අධ්‍යාපනයෙන් සුපිපුනු හෙටක් වෙනුවෙන් — අපි එක්ව ඉදිරියට යමු!
+          අධ්‍යාපනයෙන් සුපිපුණු හෙටක් වෙනුවෙන් — අපි එක්ව ඉදිරියට යමු!
         </p>
 
         <button
@@ -156,6 +164,11 @@ export default function LaunchWelcome() {
           <span aria-hidden="true">{isLaunching ? "✦" : "→"}</span>
         </button>
 
+        <p className="launch-welcome-hint">
+          {isLaunching
+            ? "අපගේ නිල වෙබ් අඩවිය ඔබ වෙත විවෘත වෙමින් පවතී..."
+            : "වෙබ් අඩවියට පිවිසීම සඳහා මෙය ක්ලික් කරන්න."}
+        </p>
       </div>
 
     </div>
