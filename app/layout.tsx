@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import LaunchWelcome from "../components/LaunchWelcome";
 
 
 export const metadata: Metadata = {
@@ -81,7 +82,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="si">
-      <body className="min-h-screen">{children}</body>
+      <body className="min-h-screen">
+        <LaunchWelcome />
+        {children}
+      </body>
     </html>
   );
 }
